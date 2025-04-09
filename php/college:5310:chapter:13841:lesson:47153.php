@@ -3,10 +3,17 @@
 $height = readline();
 $mass = readline();
 $BMI = $mass / ($height ** 2);
-$S_BMI = match ($BMI) {
-    $BMI < 18.5 => "Underweight",
-    ($BMI >= 18.5) && ($BMI < 25) => "Normal",
-    ($BMI >= 25) && ($BMI < 30) => "Overweight",
-    default => "Obese"
-};
+switch ($BMI) {
+    case $BMI < 18.5:
+        $S_BMI = "Underweight";
+        break;
+    case ($BMI >= 18.5) && ($BMI < 25):
+        $S_BMI = "Normal";    
+        break;
+    case ($BMI >= 25) && ($BMI < 30):
+        $S_BMI = "Overweight";
+        break;
+    case $BMI >= 30:
+        $S_BMI = "Obese";
+}
 echo $S_BMI;
