@@ -21,6 +21,3 @@ switch($_SESSION['counter']){
         echo "This is your {$_SESSION['counter']}th visit in this session.";
         break;
 }
-
-
-
