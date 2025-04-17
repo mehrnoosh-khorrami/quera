@@ -18,7 +18,7 @@ if(isset($_COOKIE['token'])){
 if($isSessionValid || $isCookieValid){
     header('Location: index.php');
     exit();
-}elseif(isset($_POST['username']) && isset($_POST['password'])){
+}elseif(isset($_POST['username'], $_POST['password'])){
     $username = $_POST['username'] ?? '';
     $password = $_POST['password'] ?? '';
     $checkbox = $_POST['remember'] ?? null;
