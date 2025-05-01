@@ -1,13 +1,10 @@
 -- Section1
-    SELECT customers.name, customers.phone 
-    FROM customers
-    JOIN (
-        SELECT customer_id
-        FROM orders
-        GROUP BY customer_id
-        ORDER BY COUNT(*) DESC
-        LIMIT 1
-    ) AS most_orders ON  customers.id = most_orders.customer_id;
+SELECT customers.name, customers.phone 
+from orders 
+join customers on customers.id = orders.customer_id
+group by orders.customer_id
+order by count(*) desc
+LIMIT 1;
 
 -- Section2
     SELECT foods.id, foods.name
@@ -35,7 +32,3 @@
     GROUP BY customers.id, customers.name, customers.phone
     HAVING COUNT(DISTINCT restaurant_foods.restaurant_id) >= 5
     ORDER BY customers.name ASC;
-
-
-
-
