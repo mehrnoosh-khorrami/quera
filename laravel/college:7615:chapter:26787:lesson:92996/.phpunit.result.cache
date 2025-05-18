@@ -1,0 +1,1 @@
+{"version":1,"defects":[],"times":{"Tests\\Feature\\LocalizationExampleTest::test_config":0.072,"Tests\\Feature\\LocalizationTest::test_config":0.012,"Tests\\Feature\\LocalizationTest::test_en":0.033,"Tests\\Feature\\LocalizationTest::test_fa":0.016,"Tests\\Feature\\LocalizationTest::test_fr_FR":0.015}}
